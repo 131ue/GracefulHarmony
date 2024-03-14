@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ina_WAH_Echo_Pure.mp3-25b24386a1edb6d03fa53b8569bf09f2.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Ina_WAH_Echo_Pure.mp3"
+dest_files=[ "res://.import/Ina_WAH_Echo_Pure.mp3-25b24386a1edb6d03fa53b8569bf09f2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
