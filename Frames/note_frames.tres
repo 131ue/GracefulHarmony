@@ -1,16 +1,22 @@
-[gd_resource type="SpriteFrames" load_steps=7 format=2]
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://ce2oho1me7fq2"]
 
-[ext_resource path="res://Sprites/game/arrow_button/up/arrow_button_up3.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/game/arrow_button/right/arrow_button_right3.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/game/arrow_button/left/arrow_button_left3.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/png/BlueNoteV3.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/png/PinkNoteV3.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/png/OrangeNoteV3.png" type="Texture" id=6]
+[ext_resource type="Texture2D" uid="uid://7qkdum26kk4f" path="res://Sprites/png/BlueNoteV3.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://b1cv2ic8jxtne" path="res://Sprites/png/PinkNoteV3.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://knxpjjwuxtkr" path="res://Sprites/png/OrangeNoteV3.png" id="6"]
 
 [resource]
-animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ) ],
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 5.0
-} ]
+}]

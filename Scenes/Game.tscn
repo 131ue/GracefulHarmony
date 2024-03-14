@@ -1,84 +1,90 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=13 format=3 uid="uid://dvpdm1e4yj1nc"]
 
-[ext_resource path="res://Scenes/ArrowButton.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Frames/arrow_left_frames.tres" type="SpriteFrames" id=2]
-[ext_resource path="res://Frames/arrow_right_frames.tres" type="SpriteFrames" id=3]
-[ext_resource path="res://Sprites/game/road/road.png" type="Texture" id=4]
-[ext_resource path="res://Sounds/song.ogg" type="AudioStream" id=5]
-[ext_resource path="res://Scripts/Game.gd" type="Script" id=6]
-[ext_resource path="res://Fonts/Cubic_11_1.100_R.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://Scenes/Conductor.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Sprites/png/dotpict.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/png/fad9411edc4a0e6e.png" type="Texture" id=10]
+[ext_resource type="PackedScene" uid="uid://0vigvikr0crs" path="res://Scenes/ArrowButton.tscn" id="1"]
+[ext_resource type="SpriteFrames" path="res://Frames/arrow_left_frames.tres" id="2"]
+[ext_resource type="SpriteFrames" path="res://Frames/arrow_right_frames.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://l5enovlokdte" path="res://Sprites/game/road/road.png" id="4"]
+[ext_resource type="AudioStream" uid="uid://brvt4tr1kb05s" path="res://Sounds/song.ogg" id="5"]
+[ext_resource type="Script" path="res://Scripts/Game.gd" id="6"]
+[ext_resource type="FontFile" uid="uid://buyggktcppqhf" path="res://Fonts/Cubic_11_1.100_R.ttf" id="7"]
+[ext_resource type="PackedScene" uid="uid://biplqd4ihvtl4" path="res://Scenes/Conductor.tscn" id="8"]
+[ext_resource type="Texture2D" uid="uid://b52nknvjadehy" path="res://Sprites/png/dotpict.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bb15jp1wrkq11" path="res://Sprites/png/fad9411edc4a0e6e.png" id="10"]
 
-[sub_resource type="DynamicFont" id=1]
-size = 24
-font_data = ExtResource( 7 )
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("7")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="DynamicFont" id=2]
-size = 24
-font_data = ExtResource( 7 )
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("7")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="Game" type="Node2D"]
-script = ExtResource( 6 )
+script = ExtResource("6")
 
-[node name="road" type="Sprite" parent="."]
-position = Vector2( -220, -8 )
-texture = ExtResource( 4 )
+[node name="road" type="Sprite2D" parent="."]
+position = Vector2(-220, -8)
+texture = ExtResource("4")
 centered = false
 
-[node name="ArrowUp" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 149 )
+[node name="ArrowUp" parent="." instance=ExtResource("1")]
+position = Vector2(160, 149)
 input = "up"
 
-[node name="ArrowLeft" parent="." instance=ExtResource( 1 )]
-position = Vector2( 120, 149 )
-frames = ExtResource( 2 )
+[node name="ArrowLeft" parent="." instance=ExtResource("1")]
+position = Vector2(120, 149)
+sprite_frames = ExtResource("2")
 input = "left"
 
-[node name="ArrowButton" parent="." instance=ExtResource( 1 )]
-position = Vector2( 200, 149 )
-frames = ExtResource( 3 )
+[node name="ArrowButton" parent="." instance=ExtResource("1")]
+position = Vector2(200, 149)
+sprite_frames = ExtResource("3")
 input = "right"
 
 [node name="Label" type="Label" parent="."]
-margin_left = 7.0
-margin_top = 4.0
-margin_right = 47.0
-margin_bottom = 32.0
-rect_scale = Vector2( 0.48, 0.48 )
-custom_colors/font_color = Color( 0.964706, 0.839216, 0.741176, 1 )
-custom_fonts/font = SubResource( 1 )
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 47.0
+offset_bottom = 32.0
+scale = Vector2(0.48, 0.48)
+theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
+theme_override_fonts/font = SubResource("1")
 text = "0"
 
 [node name="Combo" type="Label" parent="."]
-margin_left = 4.0
-margin_top = 20.0
-margin_right = 96.0
-margin_bottom = 34.0
-custom_colors/font_color = Color( 0.964706, 0.839216, 0.741176, 1 )
-custom_fonts/font = SubResource( 2 )
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_left = 4.0
+offset_top = 20.0
+offset_right = 96.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
+theme_override_fonts/font = SubResource("2")
 
-[node name="Conductor" parent="." instance=ExtResource( 8 )]
-stream = ExtResource( 5 )
+[node name="Conductor" parent="." instance=ExtResource("8")]
+stream = ExtResource("5")
 volume_db = -15.0
 bpm = 115
 
-[node name="Background" type="Sprite" parent="."]
-position = Vector2( 168, 94 )
-scale = Vector2( 0.3, 0.3 )
+[node name="Background" type="Sprite2D" parent="."]
 z_index = -10
-texture = ExtResource( 9 )
+position = Vector2(168, 94)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9")
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -103, 234 )
-scale = Vector2( 1.16, 1.16 )
-texture = ExtResource( 10 )
-offset = Vector2( 229.054, -145.946 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-103, 234)
+scale = Vector2(1.16, 1.16)
+texture = ExtResource("10")
+offset = Vector2(229.054, -145.946)
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]

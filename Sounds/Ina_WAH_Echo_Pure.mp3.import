@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Ina_WAH_Echo_Pure.mp3-25b24386a1edb6d03fa53b8569bf09f2.mp3str"
+uid="uid://duw5rhp1ven7t"
+path="res://.godot/imported/Ina_WAH_Echo_Pure.mp3-25b24386a1edb6d03fa53b8569bf09f2.mp3str"
 
 [deps]
 
 source_file="res://Sounds/Ina_WAH_Echo_Pure.mp3"
-dest_files=[ "res://.import/Ina_WAH_Echo_Pure.mp3-25b24386a1edb6d03fa53b8569bf09f2.mp3str" ]
+dest_files=["res://.godot/imported/Ina_WAH_Echo_Pure.mp3-25b24386a1edb6d03fa53b8569bf09f2.mp3str"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
