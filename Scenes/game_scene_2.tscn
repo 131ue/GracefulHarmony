@@ -1,0 +1,90 @@
+[gd_scene load_steps=12 format=3 uid="uid://c42rwkeu2j12t"]
+
+[ext_resource type="Script" path="res://Scenes/game_scene_2.gd" id="1_axuoh"]
+[ext_resource type="PackedScene" uid="uid://0vigvikr0crs" path="res://Scenes/ArrowButton.tscn" id="2_1n4hj"]
+[ext_resource type="SpriteFrames" uid="uid://dt3gvvoqxwbw" path="res://Frames/arrow_left_frames.tres" id="3_0htwv"]
+[ext_resource type="SpriteFrames" uid="uid://bhuwphpofoc8r" path="res://Frames/arrow_right_frames.tres" id="4_in64c"]
+[ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="6_d3bwy"]
+[ext_resource type="FontFile" uid="uid://buyggktcppqhf" path="res://Fonts/Cubic_11_1.100_R.ttf" id="7_yehpw"]
+[ext_resource type="AudioStream" uid="uid://dac222lebho4e" path="res://Sounds/NEHS_School_Song_Trimmed.mp3" id="8_ome77"]
+[ext_resource type="PackedScene" uid="uid://biplqd4ihvtl4" path="res://Scenes/Conductor.tscn" id="8_q3xv4"]
+[ext_resource type="Texture2D" uid="uid://b52nknvjadehy" path="res://Sprites/png/dotpict.png" id="10_6vi6t"]
+[ext_resource type="Texture2D" uid="uid://bb15jp1wrkq11" path="res://Sprites/png/fad9411edc4a0e6e.png" id="11_ayhxf"]
+
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("7_yehpw")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="GameScene2" type="Node2D"]
+script = ExtResource("1_axuoh")
+
+[node name="ArrowUp" parent="." instance=ExtResource("2_1n4hj")]
+position = Vector2(160, 149)
+input = "up"
+
+[node name="ArrowLeft" parent="." instance=ExtResource("2_1n4hj")]
+position = Vector2(120, 149)
+sprite_frames = ExtResource("3_0htwv")
+input = "left"
+
+[node name="ArrowButton" parent="." instance=ExtResource("2_1n4hj")]
+position = Vector2(200, 149)
+sprite_frames = ExtResource("4_in64c")
+input = "right"
+
+[node name="ScoreLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 47.0
+offset_bottom = 44.0
+bbcode_enabled = true
+text = "1"
+autowrap_mode = 0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 47.0
+offset_bottom = 32.0
+scale = Vector2(0.96, 0.96)
+theme_override_colors/font_color = Color(1, 0.831373, 0.639216, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("6_d3bwy")
+theme_override_font_sizes/font_size = 24
+text = "0"
+
+[node name="Combo" type="Label" parent="."]
+offset_left = 9.0
+offset_top = 27.0
+offset_right = 101.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
+theme_override_fonts/font = SubResource("2")
+
+[node name="Conductor" parent="." instance=ExtResource("8_q3xv4")]
+stream = ExtResource("8_ome77")
+volume_db = -5.0
+bpm = 115
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(168, 94)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_6vi6t")
+
+[node name="CharcterBackground" type="Sprite2D" parent="."]
+position = Vector2(-103, 234)
+scale = Vector2(1.16, 1.16)
+texture = ExtResource("11_ayhxf")
+offset = Vector2(229.054, -145.946)
+
+[connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
+[connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]

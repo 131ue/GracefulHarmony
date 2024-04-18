@@ -36,6 +36,7 @@ script = ExtResource("4")
 sprite_frames = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.880001)
 shape = SubResource("1")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]

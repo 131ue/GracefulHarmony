@@ -1,9 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://dvpdm1e4yj1nc"]
+[gd_scene load_steps=13 format=3 uid="uid://dvpdm1e4yj1nc"]
 
 [ext_resource type="PackedScene" uid="uid://0vigvikr0crs" path="res://Scenes/ArrowButton.tscn" id="1"]
-[ext_resource type="SpriteFrames" path="res://Frames/arrow_left_frames.tres" id="2"]
-[ext_resource type="SpriteFrames" path="res://Frames/arrow_right_frames.tres" id="3"]
-[ext_resource type="Texture2D" uid="uid://l5enovlokdte" path="res://Sprites/game/road/road.png" id="4"]
+[ext_resource type="SpriteFrames" uid="uid://dt3gvvoqxwbw" path="res://Frames/arrow_left_frames.tres" id="2"]
+[ext_resource type="SpriteFrames" uid="uid://bhuwphpofoc8r" path="res://Frames/arrow_right_frames.tres" id="3"]
 [ext_resource type="AudioStream" uid="uid://brvt4tr1kb05s" path="res://Sounds/song.ogg" id="5"]
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="6"]
 [ext_resource type="Script" path="res://Scripts/ScoreLabel.gd" id="6_nn53p"]
@@ -24,11 +23,6 @@ cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("6")
-
-[node name="road" type="Sprite2D" parent="."]
-position = Vector2(-220, -8)
-texture = ExtResource("4")
-centered = false
 
 [node name="ArrowUp" parent="." instance=ExtResource("1")]
 position = Vector2(160, 149)
