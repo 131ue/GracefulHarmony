@@ -9,7 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://dac222lebho4e" path="res://Sounds/NEHS_School_Song_Trimmed.mp3" id="8_ome77"]
 [ext_resource type="PackedScene" uid="uid://biplqd4ihvtl4" path="res://Scenes/Conductor.tscn" id="8_q3xv4"]
 [ext_resource type="Texture2D" uid="uid://b52nknvjadehy" path="res://Sprites/png/dotpict.png" id="10_6vi6t"]
-[ext_resource type="Texture2D" uid="uid://bb15jp1wrkq11" path="res://Sprites/png/fad9411edc4a0e6e.png" id="11_ayhxf"]
+[ext_resource type="Texture2D" uid="uid://bbysfsq37rmgg" path="res://Sprites/png/SchoolBG.png" id="10_p0dlj"]
 
 [sub_resource type="FontFile" id="2"]
 fallbacks = Array[Font]([ExtResource("7_yehpw")])
@@ -53,7 +53,7 @@ offset_top = 4.0
 offset_right = 47.0
 offset_bottom = 32.0
 scale = Vector2(0.96, 0.96)
-theme_override_colors/font_color = Color(1, 0.831373, 0.639216, 1)
+theme_override_colors/font_color = Color(0.552941, 0.411765, 0.478431, 1)
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 4
 theme_override_constants/shadow_outline_size = 4
@@ -80,11 +80,11 @@ position = Vector2(168, 94)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("10_6vi6t")
 
-[node name="CharcterBackground" type="Sprite2D" parent="."]
-position = Vector2(-103, 234)
-scale = Vector2(1.16, 1.16)
-texture = ExtResource("11_ayhxf")
-offset = Vector2(229.054, -145.946)
+[node name="SchoolBg" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(160.222, 90)
+scale = Vector2(1.64815, 1.64815)
+texture = ExtResource("10_p0dlj")
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]
