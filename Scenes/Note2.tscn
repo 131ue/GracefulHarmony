@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2eux6h1uwt6p"]
+
+[ext_resource type="Script" path="res://Scripts/Note2.gd" id="1_sqc2g"]
+[ext_resource type="SpriteFrames" uid="uid://ce2oho1me7fq2" path="res://Frames/note_frames.tres" id="2_eky84"]
+[ext_resource type="FontFile" uid="uid://buyggktcppqhf" path="res://Fonts/Cubic_11_1.100_R.ttf" id="3_ltthg"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(8, 8)
+
+[sub_resource type="Curve" id="Curve_ib21d"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_0dn75"]
+offsets = PackedFloat32Array(0.369501, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.329412, 0.305882, 0.407843, 1)
+
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("3_ltthg")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/16/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/16/0/glyphs/0/size = Vector2(0, 0)
+cache/0/16/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/16/0/glyphs/0/texture_idx = -1
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="Note" type="Area2D" groups=["note"]]
+script = ExtResource("1_sqc2g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_eky84")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.880001)
+shape = SubResource("1")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 16
+lifetime = 1.5
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 5.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.5
+scale_amount_min = 1.5
+scale_amount_max = 2.5
+scale_amount_curve = SubResource("Curve_ib21d")
+color_ramp = SubResource("Gradient_0dn75")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Node2D"]
+anchors_preset = -1
+anchor_right = 0.046
+offset_left = -14.0
+offset_top = -35.0
+offset_right = 38.0
+offset_bottom = -7.0
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("2")
+text = "
+"
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -11,6 +11,7 @@ var current_note = null
 func _unhandled_input(event):
 	if event.is_action(input):
 		if event.is_action_pressed(input, false):
+			#print(event.as_text())
 			if current_note != null:
 				if perfect:
 					get_parent().increment_score(1000)
@@ -71,3 +72,5 @@ func _reset():
 	perfect = false
 	good = false
 	okay = false
+
+

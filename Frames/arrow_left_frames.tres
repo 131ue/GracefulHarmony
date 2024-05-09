@@ -7,10 +7,10 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4")
+"texture": ExtResource("3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3")
+"texture": ExtResource("4")
 }],
 "loop": true,
 "name": &"default",
