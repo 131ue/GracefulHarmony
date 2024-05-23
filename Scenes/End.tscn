@@ -1,11 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://0tht8qikkrn4"]
+[gd_scene load_steps=7 format=3 uid="uid://0tht8qikkrn4"]
 
-[ext_resource type="Texture2D" uid="uid://lkn5j6loruns" path="res://Sprites/ui/play_again_button/play_again1.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://c7xhamcao43ap" path="res://Sprites/ui/back_to_menu_button/back_to_menu2.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://u8f0ty1guawo" path="res://Sprites/ui/back_to_menu_button/back_to_menu1.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://df2dkv11lcg7e" path="res://Sprites/ui/play_again_button/play_again2.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://tusxym5wcic2" path="res://Sprites/Sprites/UI_Flat_Button_Large_Lock_01a1.png" id="2_enkmf"]
 [ext_resource type="FontFile" path="res://Fonts/heartbit2x.tres" id="5"]
 [ext_resource type="Script" path="res://Scripts/End.gd" id="6"]
+[ext_resource type="Texture2D" uid="uid://ddg4vnty20a3a" path="res://Sprites/png/EndScreenBG.png" id="6_b68m5"]
 [ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="7"]
 [ext_resource type="Theme" path="res://Fonts/UI_Fonts.tres" id="8"]
 
@@ -13,136 +11,305 @@
 script = ExtResource("6")
 
 [node name="PlayAgain" type="TextureButton" parent="."]
-offset_left = 48.0
-offset_top = 128.0
-offset_right = 144.0
-offset_bottom = 168.0
-texture_normal = ExtResource("1")
-texture_pressed = ExtResource("1")
-texture_hover = ExtResource("4")
+offset_left = 28.0
+offset_top = 138.0
+offset_right = 124.0
+offset_bottom = 178.0
+scale = Vector2(0.719999, 0.719999)
+texture_normal = ExtResource("2_enkmf")
+texture_pressed = ExtResource("2_enkmf")
+texture_hover = ExtResource("2_enkmf")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="PlayAgain"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 9.0
+offset_right = 118.0
+offset_bottom = 40.0
+scale = Vector2(0.64, 0.64)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "再玩一次
+	"
 
 [node name="BackToMenu" type="TextureButton" parent="."]
-offset_left = 176.0
-offset_top = 128.0
-offset_right = 272.0
-offset_bottom = 168.0
-texture_normal = ExtResource("3")
-texture_pressed = ExtResource("3")
-texture_hover = ExtResource("2")
+offset_left = 113.0
+offset_top = 138.0
+offset_right = 209.0
+offset_bottom = 178.0
+scale = Vector2(0.72, 0.72)
+texture_normal = ExtResource("2_enkmf")
+texture_pressed = ExtResource("2_enkmf")
+texture_hover = ExtResource("2_enkmf")
+stretch_mode = 0
 
-[node name="GradeLabel" type="Label" parent="."]
-offset_left = 84.0
-offset_top = 12.0
-offset_right = 150.0
-offset_bottom = 40.0
-scale = Vector2(0.360002, 0.360002)
-theme = ExtResource("8")
-theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
-theme_override_fonts/font = ExtResource("7")
-text = "評等："
-
-[node name="GradeNumber" type="Label" parent="."]
-offset_left = 188.0
+[node name="Label" type="Label" parent="BackToMenu"]
+offset_left = 7.0
 offset_top = 8.0
-offset_right = 252.0
-offset_bottom = 36.0
-scale = Vector2(0.586188, 0.586188)
-theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
+offset_right = 137.0
+offset_bottom = 39.0
+scale = Vector2(0.64, 0.64)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7")
-text = "S"
+theme_override_font_sizes/font_size = 24
+text = "回到主畫面
+	"
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 83.0
-offset_top = 26.0
-offset_right = 217.0
-offset_bottom = 54.0
+offset_left = 29.0
+offset_top = 63.0
+offset_right = 163.0
+offset_bottom = 91.0
 scale = Vector2(0.36, 0.36)
 theme = ExtResource("8")
 theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
 theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
 text = "最終成績："
 
 [node name="ScoreNumber" type="Label" parent="."]
-offset_left = 160.0
-offset_top = 25.0
-offset_right = 224.0
-offset_bottom = 39.0
+offset_left = 135.0
+offset_top = 58.0
+offset_right = 199.0
+offset_bottom = 72.0
 theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
 theme_override_fonts/font = ExtResource("5")
 text = "1"
 
 [node name="ComboLabel" type="Label" parent="."]
-offset_left = 83.0
-offset_top = 41.0
-offset_right = 213.0
-offset_bottom = 69.0
+offset_left = 29.0
+offset_top = 78.0
+offset_right = 159.0
+offset_bottom = 106.0
 scale = Vector2(0.36, 0.36)
 theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
 theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
 text = "最高連擊："
 
 [node name="ComboNumber" type="Label" parent="."]
-offset_left = 160.0
-offset_top = 40.0
-offset_right = 224.0
-offset_bottom = 54.0
+offset_left = 135.0
+offset_top = 73.0
+offset_right = 199.0
+offset_bottom = 87.0
 theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
 theme_override_fonts/font = ExtResource("5")
+text = "1"
 
 [node name="GreatLabel" type="Label" parent="."]
 clip_contents = true
-offset_left = 84.0
-offset_top = 56.0
-offset_right = 148.0
-offset_bottom = 70.0
+offset_left = 30.0
+offset_top = 93.0
+offset_right = 108.0
+offset_bottom = 121.0
 scale = Vector2(0.36, 0.36)
 theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
 theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
 text = "絕妙："
 
 [node name="GreatNumber" type="Label" parent="."]
-offset_left = 160.0
-offset_top = 56.0
-offset_right = 224.0
-offset_bottom = 70.0
+offset_left = 135.0
+offset_top = 89.0
+offset_right = 199.0
+offset_bottom = 103.0
 theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
 theme_override_fonts/font = ExtResource("5")
+text = "1"
 
 [node name="GoodLabel" type="Label" parent="."]
-offset_left = 84.0
-offset_top = 69.0
-offset_right = 148.0
-offset_bottom = 97.0
+offset_left = 30.0
+offset_top = 106.0
+offset_right = 94.0
+offset_bottom = 134.0
 scale = Vector2(0.36, 0.36)
 theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
 theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
 text = "善："
 
 [node name="GoodNumber" type="Label" parent="."]
-offset_left = 160.0
-offset_top = 69.0
-offset_right = 224.0
-offset_bottom = 83.0
+offset_left = 135.0
+offset_top = 102.0
+offset_right = 199.0
+offset_bottom = 116.0
 theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
 theme_override_fonts/font = ExtResource("5")
+text = "1"
 
 [node name="MissedLabel" type="Label" parent="."]
-offset_left = 84.0
-offset_top = 83.0
-offset_right = 162.0
-offset_bottom = 111.0
+offset_left = 30.0
+offset_top = 120.0
+offset_right = 108.0
+offset_bottom = 148.0
 scale = Vector2(0.36, 0.36)
 theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
 theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
 text = "失之："
 
 [node name="MissedNumber" type="Label" parent="."]
-offset_left = 160.0
-offset_top = 82.0
-offset_right = 224.0
-offset_bottom = 96.0
+offset_left = 135.0
+offset_top = 115.0
+offset_right = 199.0
+offset_bottom = 129.0
 theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
 theme_override_fonts/font = ExtResource("5")
+text = "1"
+
+[node name="Chen" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 10.0
+offset_right = 65.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "誠
+"
+
+[node name="Chen_Arrow" type="Label" parent="Chen"]
+visible = false
+layout_mode = 0
+offset_top = 27.0
+offset_right = 40.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "↑"
+
+[node name="Ken" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 10.0
+offset_right = 94.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "懇"
+
+[node name="Ken_Arrow" type="Label" parent="Ken"]
+visible = false
+offset_top = 27.0
+offset_right = 40.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "↑"
+
+[node name="Ta" type="Label" parent="."]
+offset_left = 82.0
+offset_top = 10.0
+offset_right = 122.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "踏"
+
+[node name="Ta_Arrow" type="Label" parent="Ta"]
+visible = false
+offset_top = 27.0
+offset_right = 40.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "↑"
+
+[node name="Shih" type="Label" parent="."]
+offset_left = 110.0
+offset_top = 10.0
+offset_right = 150.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "實"
+
+[node name="Shih_Arrow" type="Label" parent="Shih"]
+visible = false
+offset_top = 27.0
+offset_right = 40.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "↑"
+
+[node name="Chung" type="Label" parent="."]
+offset_left = 136.0
+offset_top = 10.0
+offset_right = 176.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "創"
+
+[node name="Chung_Arrow" type="Label" parent="Chung"]
+visible = false
+offset_top = 27.0
+offset_right = 40.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "↑"
+
+[node name="Xin" type="Label" parent="."]
+offset_left = 162.0
+offset_top = 10.0
+offset_right = 202.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "新"
+
+[node name="Xin_Arrow" type="Label" parent="Xin"]
+visible = false
+offset_top = 27.0
+offset_right = 40.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "↑"
+
+[node name="Chao" type="Label" parent="."]
+offset_left = 188.0
+offset_top = 10.0
+offset_right = 228.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "超"
+
+[node name="Chao_Arrow" type="Label" parent="Chao"]
+visible = false
+offset_top = 27.0
+offset_right = 40.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "↑"
+
+[node name="Yuae" type="Label" parent="."]
+offset_left = 214.0
+offset_top = 10.0
+offset_right = 254.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "越"
+
+[node name="Yuae_Arrow" type="Label" parent="Yuae"]
+visible = false
+offset_top = 27.0
+offset_right = 40.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 24
+text = "↑"
+
+[node name="EndScreenBg" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(163, 91)
+scale = Vector2(1.68519, 1.68519)
+texture = ExtResource("6_b68m5")
 
 [connection signal="pressed" from="PlayAgain" to="." method="_on_PlayAgain_pressed"]
 [connection signal="pressed" from="BackToMenu" to="." method="_on_BackToMenu_pressed"]

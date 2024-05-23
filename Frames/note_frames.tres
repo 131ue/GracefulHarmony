@@ -1,5 +1,6 @@
-[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://ce2oho1me7fq2"]
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://ce2oho1me7fq2"]
 
+[ext_resource type="Texture2D" uid="uid://csf3wprq3hdi2" path="res://Sprites/png/GreenNote.png" id="3_1cxex"]
 [ext_resource type="Texture2D" uid="uid://7qkdum26kk4f" path="res://Sprites/png/BlueNoteV3.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://b1cv2ic8jxtne" path="res://Sprites/png/PinkNoteV3.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://knxpjjwuxtkr" path="res://Sprites/png/OrangeNoteV3.png" id="6"]
@@ -11,10 +12,13 @@ animations = [{
 "texture": ExtResource("4")
 }, {
 "duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
 "texture": ExtResource("6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5")
+"texture": ExtResource("3_1cxex")
 }],
 "loop": true,
 "name": &"default",

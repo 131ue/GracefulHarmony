@@ -29,7 +29,7 @@ var instance
 const great_score = 1000
 const good_score = 500
 const bad_score = 0
-
+var note_type = 0
 var score_multiplyer
 
 var spnote = 0
@@ -58,11 +58,30 @@ func _process(delta):
 	secsum = time
 	#print(secsum)
 	if (secsum > float(note_time[142 - note_counter]) - deviation and secsum < float(note_time[142 - note_counter]) + deviation):
-		if (note_counter + 1 == problematic_notes[49 - problematic_count]):
-			if (problematic_count % 3 == 0):
-				_spawn_two_notes(0,2)
+		if (note_time[142 - note_counter] == 69.41):
+			_spawn_three_notes()
+		elif (note_time[142 - note_counter] == 61.13):
+			_spawn_three_notes()
+		elif (note_time[142 - note_counter] == 74.29):
+			_spawn_three_notes()
+		elif (note_counter + 1 == problematic_notes[49 - problematic_count]):
+			if (note_counter <70):
+				if (problematic_count % 3 == 0):
+					_spawn_two_notes(0,2)
+				else:
+					if (note_type == 100):
+						_spawn_two_notes(1,2)
+					elif (note_type == 010):
+						_spawn_two_notes(0,2)
+					else:
+						_spawn_two_notes(0,1)
 			else:
-				_spawn_two_notes(1,2)
+				if (note_type == 100):
+					_spawn_two_notes(1,2)
+				elif (note_type == 010):
+					_spawn_two_notes(0,2)
+				else:
+					_spawn_two_notes(0,1)
 			problematic_count += 1
 		elif (note_counter + 1 == too_fast_count[18 - too_fast_counter]):
 			#await get_tree().create_timer(0.1).timeout
@@ -70,16 +89,30 @@ func _process(delta):
 			#note_counter += 1
 			#note_pos += 1
 			too_fast_counter += 1
-		elif (note_time[142 - note_counter] == 3.89):
-			_spawn_notes(1)	
+		#elif (note_time[142 - note_counter] == 3.89):
+			#_spawn_notes(1)	
+		#elif (note_time[142 - note_counter] == 11.2):
+			#_spawn_notes(0)		
 		else:
 			_spawn_notes(spnote)
+			if (spnote == 0):
+				note_type = 100
+			elif (spnote == 1):
+				note_type = 010	
+			else:
+				note_type = 001
 			spnote += 1
 		if (spnote > 2 ):
 			spnote = 0	
 		note_counter += 1
 		note_pos += 1
-		print(note_counter)
+		
+		#if(note_counter == 10):
+			#_endscreen()
+		if (note_counter == 143):
+			await get_tree().create_timer(6).timeout
+			_endscreen()
+		#print(note_counter)
 		#print(problematic_notes[49 - problematic_count])
 		
 	

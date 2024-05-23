@@ -3,7 +3,7 @@ extends Control
 func _on_Start_Button_button_down():
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), 
 								linear_to_db($HSlider.value))
-	if get_tree().change_scene_to_file("res://Scenes/level_selector.tscn") != OK:
+	if get_tree().change_scene_to_file("res://Scenes/game_scene_2.tscn") != OK:
 		print ("Error changing scene to Game")
 
 

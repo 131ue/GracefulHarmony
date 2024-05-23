@@ -1,23 +1,29 @@
-[gd_scene load_steps=14 format=3 uid="uid://vrbvxrny4p3x"]
+[gd_scene load_steps=21 format=3 uid="uid://vrbvxrny4p3x"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://dd8smfj2cqali" path="res://Sprites/png/TitleBackground.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://bsb5dkgbkehit" path="res://Sprites/ui/play_button1.png" id="3"]
-[ext_resource type="FontFile" uid="uid://buyggktcppqhf" path="res://Fonts/Cubic_11_1.100_R.ttf" id="4"]
-[ext_resource type="Texture2D" uid="uid://d3240yoc71k3n" path="res://Sprites/ui/slider.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://tusxym5wcic2" path="res://Sprites/Sprites/UI_Flat_Button_Large_Lock_01a1.png" id="2_xk1st"]
+[ext_resource type="Texture2D" uid="uid://bwhequkejpit3" path="res://Sprites/Sprites/UI_Flat_Button_Large_Lock_01a2.png" id="3_mxu1j"]
 [ext_resource type="FontFile" uid="uid://vbhobcfyo30s" path="res://NewCubic.tres" id="5_187vy"]
-[ext_resource type="Texture2D" uid="uid://blomtr585ebxn" path="res://Sprites/ui/slider_arrow2.png" id="7"]
-[ext_resource type="Texture2D" uid="uid://esue2y1exms3" path="res://Sprites/ui/slider_arrow1.png" id="8"]
-[ext_resource type="Texture2D" uid="uid://djiyqqybt6nwu" path="res://Sprites/ui/slider_arrow.png" id="8_0lq3q"]
+[ext_resource type="Texture2D" uid="uid://d1plsrc3dru6c" path="res://Sprites/Sprites/UI_Flat_Scrollbar_Handle_01.png" id="6_mhhd1"]
+[ext_resource type="Texture2D" uid="uid://b6dakk1gyqwey" path="res://Sprites/Sprites/UI_Flat_Scrollbar_01.png" id="8_fihhr"]
+[ext_resource type="Texture2D" uid="uid://f8p4t0wvinbw" path="res://Sprites/Sprites/UI_Flat_Button_Medium_Lock_01a1.png" id="8_iyya6"]
+[ext_resource type="Texture2D" uid="uid://bydcmj0rf2xun" path="res://Sprites/Sprites/UI_Flat_Button_Medium_Lock_01a2.png" id="9_8na1b"]
 [ext_resource type="AudioStream" uid="uid://duw5rhp1ven7t" path="res://Sounds/Ina_WAH_Echo_Pure.mp3" id="10"]
-[ext_resource type="Texture2D" uid="uid://b5md6g6nulw7q" path="res://Sprites/ui/play_button_toggle1.png" id="11"]
-[ext_resource type="Texture2D" uid="uid://bjr0agvtxf247" path="res://Sprites/ui/play_button_toggle2.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://bb15jp1wrkq11" path="res://Sprites/png/fad9411edc4a0e6e.png" id="11_c11ok"]
+[ext_resource type="Texture2D" uid="uid://b52nknvjadehy" path="res://Sprites/png/dotpict.png" id="12_okou0"]
+[ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="13_heu1x"]
+[ext_resource type="Texture2D" uid="uid://b1cv2ic8jxtne" path="res://Sprites/png/PinkNoteV3.png" id="14_kp8fg"]
+[ext_resource type="Texture2D" uid="uid://knxpjjwuxtkr" path="res://Sprites/png/OrangeNoteV3.png" id="15_6hlmv"]
+[ext_resource type="Texture2D" uid="uid://7qkdum26kk4f" path="res://Sprites/png/BlueNoteV3.png" id="16_5iowo"]
+[ext_resource type="Texture2D" uid="uid://csf3wprq3hdi2" path="res://Sprites/png/GreenNote.png" id="17_1bd0v"]
+[ext_resource type="Texture2D" uid="uid://d0hx6o7q50tp" path="res://Sprites/png/UnlitNoteV4.png" id="17_c1t1j"]
+[ext_resource type="Texture2D" uid="uid://bbi71f2mqf3nx" path="res://Sprites/png/UnlitNoteV3.png" id="18_fxhmg"]
+[ext_resource type="Texture2D" uid="uid://dht2ecipdwubp" path="res://Sprites/png/UnlitNoteV5.png" id="19_n2jor"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_12tu3"]
-content_margin_left = 3.0
-content_margin_top = 10.0
-content_margin_bottom = 0.0
-texture = ExtResource("5")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t1ssk"]
+texture = ExtResource("8_fihhr")
+expand_margin_top = 13.0
+expand_margin_bottom = 19.0
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -32,25 +38,27 @@ script = ExtResource("1")
 [node name="Start_Button" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 112.0
-offset_top = 131.0
-offset_right = 304.0
-offset_bottom = 179.0
+offset_left = 23.0
+offset_top = 102.0
+offset_right = 211.0
+offset_bottom = 150.0
 grow_horizontal = 2
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("12")
-texture_pressed = ExtResource("11")
-texture_hover = ExtResource("3")
-stretch_mode = 4
+scale = Vector2(0.482831, 0.482831)
+texture_normal = ExtResource("2_xk1st")
+texture_pressed = ExtResource("3_mxu1j")
+stretch_mode = 0
 
 [node name="StartButtonText" type="Label" parent="Start_Button"]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 14.0
-offset_right = 160.0
-offset_bottom = 73.0
-scale = Vector2(0.76, 0.76)
-theme_override_colors/font_color = Color(0.243137, 0.168627, 0.270588, 1)
+offset_left = 39.3512
+offset_top = 8.28446
+offset_right = 143.351
+offset_bottom = 67.2844
+scale = Vector2(1.00832, 1.00832)
+theme_override_colors/font_color = Color(0, 0.109804, 0.25098, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("5_187vy")
 theme_override_font_sizes/font_size = 24
 text = "開始遊戲
@@ -59,65 +67,41 @@ text = "開始遊戲
 [node name="HSlider" type="HSlider" parent="."]
 z_index = 1000
 layout_mode = 0
-offset_left = 28.0
-offset_top = 6.0
-offset_right = 84.0
-offset_bottom = 22.0
+offset_left = 269.0
+offset_top = -1.0
+offset_right = 325.0
+offset_bottom = 31.0
 scale = Vector2(0.759999, 0.759999)
-theme_override_icons/grabber = ExtResource("8")
-theme_override_icons/grabber_highlight = ExtResource("7")
-theme_override_icons/grabber_disabled = ExtResource("8_0lq3q")
-theme_override_styles/slider = SubResource("StyleBoxTexture_12tu3")
+theme_override_icons/grabber = ExtResource("6_mhhd1")
+theme_override_icons/grabber_highlight = ExtResource("6_mhhd1")
+theme_override_icons/grabber_disabled = ExtResource("6_mhhd1")
+theme_override_styles/slider = SubResource("StyleBoxTexture_t1ssk")
 max_value = 1.0
 step = 0.01
 value = 1.0
 
-[node name="VolumeText" type="Label" parent="."]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 7.0
-offset_right = 108.0
-offset_bottom = 66.0
-scale = Vector2(0.351193, 0.389899)
-theme_override_colors/font_color = Color(0.305882, 0.286275, 0.372549, 1)
-theme_override_fonts/font = ExtResource("4")
-theme_override_font_sizes/font_size = 24
-text = "音量
-"
-
-[node name="HowToPlayText" type="Label" parent="."]
-layout_mode = 0
-offset_left = 99.0
-offset_top = 163.0
-offset_right = 403.0
-offset_bottom = 191.0
-scale = Vector2(0.422, 0.422)
-theme_override_colors/font_color = Color(0.305882, 0.286275, 0.372549, 1)
-theme_override_fonts/font = ExtResource("4")
-theme_override_font_sizes/font_size = 24
-text = "<用WASD或方向鍵來操作>"
-
 [node name="VolumeButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 23.0
+offset_left = 273.0
 offset_top = 18.0
-offset_right = 143.0
-offset_bottom = 48.0
+offset_right = 393.0
+offset_bottom = 50.0
 scale = Vector2(0.285685, 0.285685)
-texture_normal = ExtResource("12")
-stretch_mode = 1
+texture_normal = ExtResource("8_iyya6")
+texture_pressed = ExtResource("9_8na1b")
+stretch_mode = 0
 
 [node name="VolumeButtonText" type="Label" parent="VolumeButton"]
 layout_mode = 0
-offset_left = 31.5032
-offset_top = 3.50036
-offset_right = 135.503
-offset_bottom = 62.5004
-scale = Vector2(0.76, 0.76)
+offset_left = 28.003
+offset_top = 5.506
+offset_right = 132.003
+offset_bottom = 64.5061
+scale = Vector2(0.620054, 0.620054)
 theme_override_colors/font_color = Color(0.243137, 0.168627, 0.270588, 1)
 theme_override_fonts/font = ExtResource("5_187vy")
 theme_override_font_sizes/font_size = 24
-text = "測試
+text = "音量測試
 
 "
 
@@ -125,10 +109,73 @@ text = "測試
 stream = ExtResource("10")
 
 [node name="MenuBackground" type="Sprite2D" parent="."]
-z_index = -20
-position = Vector2(155, 102)
-scale = Vector2(1.87768, 1.87768)
-texture = ExtResource("2")
+z_index = -1
+position = Vector2(214, 61)
+scale = Vector2(1.39768, 1.39768)
+texture = ExtResource("11_c11ok")
+
+[node name="Dotpict" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(200, 110)
+scale = Vector2(0.240002, 0.240002)
+texture = ExtResource("12_okou0")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 6.0
+offset_right = 80.0
+offset_bottom = 65.0
+scale = Vector2(1.50557, 1.50557)
+theme_override_colors/font_color = Color(1, 0.992157, 0.960784, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.831373, 0.639216, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = -1
+theme_override_fonts/font = ExtResource("13_heu1x")
+theme_override_font_sizes/font_size = 24
+text = "雅韻
+琴魂"
+
+[node name="PinkNoteV3" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(222, 147)
+texture = ExtResource("14_kp8fg")
+
+[node name="OrangeNoteV3" type="Sprite2D" parent="."]
+position = Vector2(266, 71)
+texture = ExtResource("15_6hlmv")
+
+[node name="BlueNoteV3" type="Sprite2D" parent="."]
+position = Vector2(161, 23)
+texture = ExtResource("16_5iowo")
+
+[node name="UnlitNoteV4" type="Sprite2D" parent="."]
+position = Vector2(266, 156)
+texture = ExtResource("17_c1t1j")
+
+[node name="UnlitNoteV5" type="Sprite2D" parent="."]
+position = Vector2(222, 156)
+texture = ExtResource("17_c1t1j")
+
+[node name="UnlitNoteV6" type="Sprite2D" parent="."]
+position = Vector2(178, 156)
+texture = ExtResource("17_c1t1j")
+
+[node name="UnlitNoteV7" type="Sprite2D" parent="."]
+position = Vector2(136, 156)
+texture = ExtResource("17_c1t1j")
+
+[node name="GreenNote" type="Sprite2D" parent="."]
+position = Vector2(135, 102)
+texture = ExtResource("17_1bd0v")
+
+[node name="UnlitNoteV3" type="Sprite2D" parent="."]
+position = Vector2(178, 156)
+texture = ExtResource("18_fxhmg")
+
+[node name="UnlitNoteV8" type="Sprite2D" parent="."]
+position = Vector2(266, 156)
+texture = ExtResource("19_n2jor")
 
 [connection signal="button_down" from="Start_Button" to="." method="_on_Start_Button_button_down"]
 [connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
