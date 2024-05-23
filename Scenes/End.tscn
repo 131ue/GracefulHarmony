@@ -46,6 +46,7 @@ texture_hover = ExtResource("2_enkmf")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="BackToMenu"]
+layout_mode = 0
 offset_left = 7.0
 offset_top = 8.0
 offset_right = 137.0
@@ -190,6 +191,7 @@ text = "懇"
 
 [node name="Ken_Arrow" type="Label" parent="Ken"]
 visible = false
+layout_mode = 0
 offset_top = 27.0
 offset_right = 40.0
 offset_bottom = 55.0
@@ -208,6 +210,7 @@ text = "踏"
 
 [node name="Ta_Arrow" type="Label" parent="Ta"]
 visible = false
+layout_mode = 0
 offset_top = 27.0
 offset_right = 40.0
 offset_bottom = 55.0
@@ -226,6 +229,7 @@ text = "實"
 
 [node name="Shih_Arrow" type="Label" parent="Shih"]
 visible = false
+layout_mode = 0
 offset_top = 27.0
 offset_right = 40.0
 offset_bottom = 55.0
@@ -244,6 +248,7 @@ text = "創"
 
 [node name="Chung_Arrow" type="Label" parent="Chung"]
 visible = false
+layout_mode = 0
 offset_top = 27.0
 offset_right = 40.0
 offset_bottom = 55.0
@@ -262,6 +267,7 @@ text = "新"
 
 [node name="Xin_Arrow" type="Label" parent="Xin"]
 visible = false
+layout_mode = 0
 offset_top = 27.0
 offset_right = 40.0
 offset_bottom = 55.0
@@ -280,6 +286,7 @@ text = "超"
 
 [node name="Chao_Arrow" type="Label" parent="Chao"]
 visible = false
+layout_mode = 0
 offset_top = 27.0
 offset_right = 40.0
 offset_bottom = 55.0
@@ -298,6 +305,7 @@ text = "越"
 
 [node name="Yuae_Arrow" type="Label" parent="Yuae"]
 visible = false
+layout_mode = 0
 offset_top = 27.0
 offset_right = 40.0
 offset_bottom = 55.0

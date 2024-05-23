@@ -82,8 +82,8 @@ texture = ExtResource("10_6vi6t")
 
 [node name="SchoolBg" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(160.222, 90)
-scale = Vector2(1.64815, 1.64815)
+position = Vector2(161, 89.5)
+scale = Vector2(1.67708, 1.65741)
 texture = ExtResource("10_p0dlj")
 
 [node name="Dotpict" type="Sprite2D" parent="."]
