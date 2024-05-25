@@ -1,18 +1,18 @@
 [gd_scene load_steps=12 format=3 uid="uid://c42rwkeu2j12t"]
 
-[ext_resource type="Script" path="res://Scenes/game_scene_2.gd" id="1_axuoh"]
-[ext_resource type="PackedScene" uid="uid://0vigvikr0crs" path="res://Scenes/ArrowButton.tscn" id="2_1n4hj"]
-[ext_resource type="SpriteFrames" uid="uid://dt3gvvoqxwbw" path="res://Frames/arrow_left_frames.tres" id="3_0htwv"]
-[ext_resource type="SpriteFrames" uid="uid://bhuwphpofoc8r" path="res://Frames/arrow_right_frames.tres" id="4_in64c"]
-[ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="6_d3bwy"]
-[ext_resource type="FontFile" uid="uid://buyggktcppqhf" path="res://Fonts/Cubic_11_1.100_R.ttf" id="7_yehpw"]
-[ext_resource type="AudioStream" uid="uid://dac222lebho4e" path="res://Sounds/NEHS_School_Song_Trimmed.mp3" id="8_ome77"]
-[ext_resource type="PackedScene" uid="uid://biplqd4ihvtl4" path="res://Scenes/Conductor.tscn" id="8_q3xv4"]
-[ext_resource type="Texture2D" uid="uid://b52nknvjadehy" path="res://Sprites/png/dotpict.png" id="10_6vi6t"]
-[ext_resource type="Texture2D" uid="uid://bbysfsq37rmgg" path="res://Sprites/png/SchoolBG.png" id="10_p0dlj"]
+[ext_resource type="Script" path="res://Scenes/GameScene.gd" id="1_fmr5d"]
+[ext_resource type="PackedScene" uid="uid://0vigvikr0crs" path="res://Scenes/ArrowButton.tscn" id="2_khah2"]
+[ext_resource type="SpriteFrames" uid="uid://dt3gvvoqxwbw" path="res://Frames/arrow_left_frames.tres" id="3_l77h0"]
+[ext_resource type="SpriteFrames" uid="uid://bhuwphpofoc8r" path="res://Frames/arrow_right_frames.tres" id="4_haj2y"]
+[ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="5_dwwry"]
+[ext_resource type="FontFile" uid="uid://buyggktcppqhf" path="res://Fonts/Cubic_11_1.100_R.ttf" id="6_yntch"]
+[ext_resource type="PackedScene" uid="uid://biplqd4ihvtl4" path="res://Scenes/Conductor.tscn" id="7_8jv3d"]
+[ext_resource type="AudioStream" uid="uid://dac222lebho4e" path="res://Sounds/NEHS_School_Song_Trimmed.mp3" id="8_tj72y"]
+[ext_resource type="Texture2D" uid="uid://b52nknvjadehy" path="res://Sprites/png/dotpict.png" id="9_5dqf7"]
+[ext_resource type="Texture2D" uid="uid://bbysfsq37rmgg" path="res://Sprites/png/SchoolBG.png" id="10_xl8nq"]
 
 [sub_resource type="FontFile" id="2"]
-fallbacks = Array[Font]([ExtResource("7_yehpw")])
+fallbacks = Array[Font]([ExtResource("6_yntch")])
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -21,20 +21,20 @@ cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="GameScene2" type="Node2D"]
-script = ExtResource("1_axuoh")
+script = ExtResource("1_fmr5d")
 
-[node name="ArrowUp" parent="." instance=ExtResource("2_1n4hj")]
+[node name="ArrowUp" parent="." instance=ExtResource("2_khah2")]
 position = Vector2(160, 149)
 input = "up"
 
-[node name="ArrowLeft" parent="." instance=ExtResource("2_1n4hj")]
+[node name="ArrowLeft" parent="." instance=ExtResource("2_khah2")]
 position = Vector2(120, 149)
-sprite_frames = ExtResource("3_0htwv")
+sprite_frames = ExtResource("3_l77h0")
 input = "left"
 
-[node name="ArrowButton" parent="." instance=ExtResource("2_1n4hj")]
+[node name="ArrowButton" parent="." instance=ExtResource("2_khah2")]
 position = Vector2(200, 149)
-sprite_frames = ExtResource("4_in64c")
+sprite_frames = ExtResource("4_haj2y")
 input = "right"
 
 [node name="ScoreLabel" type="RichTextLabel" parent="."]
@@ -57,7 +57,7 @@ theme_override_colors/font_color = Color(0, 0.329412, 0.203922, 1)
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 4
 theme_override_constants/shadow_outline_size = 4
-theme_override_fonts/font = ExtResource("6_d3bwy")
+theme_override_fonts/font = ExtResource("5_dwwry")
 theme_override_font_sizes/font_size = 24
 text = "0"
 
@@ -69,8 +69,8 @@ offset_bottom = 47.0
 theme_override_colors/font_color = Color(0.815686, 0.505882, 0.34902, 1)
 theme_override_fonts/font = SubResource("2")
 
-[node name="Conductor" parent="." instance=ExtResource("8_q3xv4")]
-stream = ExtResource("8_ome77")
+[node name="Conductor" parent="." instance=ExtResource("7_8jv3d")]
+stream = ExtResource("8_tj72y")
 volume_db = -5.0
 bpm = 115
 
@@ -78,20 +78,20 @@ bpm = 115
 z_index = -10
 position = Vector2(168, 94)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("10_6vi6t")
+texture = ExtResource("9_5dqf7")
 
 [node name="SchoolBg" type="Sprite2D" parent="."]
 z_index = -2
 position = Vector2(161, 89.5)
 scale = Vector2(1.67708, 1.65741)
-texture = ExtResource("10_p0dlj")
+texture = ExtResource("10_xl8nq")
 
 [node name="Dotpict" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.741176)
 z_index = -1
 position = Vector2(159, 110)
 scale = Vector2(0.199996, 0.199996)
-texture = ExtResource("10_6vi6t")
+texture = ExtResource("9_5dqf7")
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]

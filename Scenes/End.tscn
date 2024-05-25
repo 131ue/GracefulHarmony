@@ -47,10 +47,10 @@ stretch_mode = 0
 
 [node name="Label" type="Label" parent="BackToMenu"]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 8.0
-offset_right = 137.0
-offset_bottom = 39.0
+offset_left = 6.94444
+offset_top = 8.33334
+offset_right = 136.944
+offset_bottom = 39.3333
 scale = Vector2(0.64, 0.64)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7")

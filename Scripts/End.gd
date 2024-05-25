@@ -44,6 +44,6 @@ func _ready():
 
 
 func _on_PlayAgain_pressed():
-	get_tree().change_scene_to_file("res://Scenes/game_scene_2.tscn") 
+	get_tree().change_scene_to_file("res://Scenes/GameScene.tscn") 
 func _on_BackToMenu_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Menu.tscn") 

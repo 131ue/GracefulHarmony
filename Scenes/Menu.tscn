@@ -39,9 +39,9 @@ script = ExtResource("1")
 layout_mode = 1
 anchors_preset = -1
 offset_left = 23.0
-offset_top = 102.0
+offset_top = 105.0
 offset_right = 211.0
-offset_bottom = 150.0
+offset_bottom = 153.0
 grow_horizontal = 2
 scale = Vector2(0.482831, 0.482831)
 texture_normal = ExtResource("2_xk1st")
@@ -120,12 +120,12 @@ position = Vector2(200, 110)
 scale = Vector2(0.240002, 0.240002)
 texture = ExtResource("12_okou0")
 
-[node name="Label" type="Label" parent="."]
+[node name="Title" type="Label" parent="."]
 layout_mode = 0
 offset_left = 28.0
-offset_top = 6.0
+offset_top = 12.0
 offset_right = 80.0
-offset_bottom = 65.0
+offset_bottom = 71.0
 scale = Vector2(1.50557, 1.50557)
 theme_override_colors/font_color = Color(1, 0.992157, 0.960784, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.831373, 0.639216, 1)
