@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtppbqf5p615j"]
+
+[ext_resource type="Texture2D" uid="uid://ddg4vnty20a3a" path="res://Sprites/png/EndScreenBG.png" id="1_bvex4"]
+[ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="2_6bwik"]
+
+[node name="BackGroundStoryA" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="A" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(160, 91)
+scale = Vector2(1.67708, 1.68519)
+texture = ExtResource("1_bvex4")
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 96.0
+offset_top = 52.0
+offset_right = 182.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6bwik")
+theme_override_font_sizes/font_size = 24
+text = "Scene A"

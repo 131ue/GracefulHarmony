@@ -1,0 +1,118 @@
+[gd_scene load_steps=7 format=3 uid="uid://b64t5ascwclbl"]
+
+[ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="1_66m0l"]
+[ext_resource type="Texture2D" uid="uid://d0hx6o7q50tp" path="res://Sprites/png/UnlitNoteV4.png" id="2_6yynr"]
+[ext_resource type="Texture2D" uid="uid://b52nknvjadehy" path="res://Sprites/png/dotpict.png" id="3_iid3e"]
+[ext_resource type="Texture2D" uid="uid://knxpjjwuxtkr" path="res://Sprites/png/OrangeNoteV3.png" id="4_r6trm"]
+[ext_resource type="Texture2D" uid="uid://b1cv2ic8jxtne" path="res://Sprites/png/PinkNoteV3.png" id="5_3jykq"]
+[ext_resource type="Texture2D" uid="uid://7qkdum26kk4f" path="res://Sprites/png/BlueNoteV3.png" id="6_5attb"]
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 15.0
+offset_right = 124.0
+offset_bottom = 43.0
+scale = Vector2(0.84, 0.84)
+theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
+theme_override_fonts/font = ExtResource("1_66m0l")
+theme_override_font_sizes/font_size = 24
+text = "遊戲教學:"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 769.0
+offset_bottom = 70.0
+scale = Vector2(0.44, 0.44)
+theme_override_colors/font_color = Color(1, 0.992157, 0.960784, 1)
+theme_override_fonts/font = ExtResource("1_66m0l")
+theme_override_font_sizes/font_size = 24
+text = "等等會出現三個判定點，在音符接近時按下對應的按鍵吧！"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 146.0
+offset_right = 230.0
+offset_bottom = 174.0
+scale = Vector2(0.84, 0.84)
+theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
+theme_override_fonts/font = ExtResource("1_66m0l")
+theme_override_font_sizes/font_size = 24
+text = "←"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 146.0
+offset_right = 266.0
+offset_bottom = 174.0
+scale = Vector2(0.84, 0.84)
+theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
+theme_override_fonts/font = ExtResource("1_66m0l")
+theme_override_font_sizes/font_size = 24
+text = "↑"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 146.0
+offset_right = 302.0
+offset_bottom = 174.0
+scale = Vector2(0.84, 0.84)
+theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
+theme_override_fonts/font = ExtResource("1_66m0l")
+theme_override_font_sizes/font_size = 24
+text = "→"
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 148.0
+offset_right = 359.0
+offset_bottom = 176.0
+scale = Vector2(0.719999, 0.719999)
+theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
+theme_override_fonts/font = ExtResource("1_66m0l")
+theme_override_font_sizes/font_size = 24
+text = "按鍵:                            "
+
+[node name="UnlitNoteV4" type="Sprite2D" parent="."]
+position = Vector2(128.26, 122.896)
+texture = ExtResource("2_6yynr")
+
+[node name="UnlitNoteV5" type="Sprite2D" parent="."]
+position = Vector2(165.26, 122.896)
+texture = ExtResource("2_6yynr")
+
+[node name="UnlitNoteV6" type="Sprite2D" parent="."]
+position = Vector2(201.26, 122.896)
+texture = ExtResource("2_6yynr")
+
+[node name="Dotpict" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(165.26, 82.8965)
+scale = Vector2(0.21573, 0.21573)
+texture = ExtResource("3_iid3e")
+
+[node name="OrangeNoteV3" type="Sprite2D" parent="."]
+position = Vector2(202, 117)
+texture = ExtResource("4_r6trm")
+
+[node name="PinkNoteV3" type="Sprite2D" parent="."]
+position = Vector2(166, 76)
+texture = ExtResource("5_3jykq")
+
+[node name="BlueNoteV3" type="Sprite2D" parent="."]
+position = Vector2(128, 97)
+texture = ExtResource("6_5attb")

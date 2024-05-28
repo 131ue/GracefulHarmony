@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5egn24e7v10m"]
+
+[ext_resource type="Script" path="res://Scenes/SceneManager.gd" id="1_heow2"]
+[ext_resource type="PackedScene" uid="uid://dtppbqf5p615j" path="res://BackGroundStoryA.tscn" id="3_52kpm"]
+[ext_resource type="PackedScene" uid="uid://dhoywjb0ubx2j" path="res://Scenes/FadeAnimation.tscn" id="5_ssaw2"]
+
+[node name="SceneManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_heow2")
+
+[node name="CurrentScene" type="Node2D" parent="."]
+
+[node name="BackGroundStoryA" parent="CurrentScene" instance=ExtResource("3_52kpm")]
+
+[node name="FadeAnimation" parent="." instance=ExtResource("5_ssaw2")]
+layer = 0
+visible = false
+
+[connection signal="transitioned" from="FadeAnimation" to="." method="_on_fade_animation_transitioned"]
