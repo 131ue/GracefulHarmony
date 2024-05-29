@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtppbqf5p615j"]
+[gd_scene load_steps=6 format=3 uid="uid://dtppbqf5p615j"]
 
 [ext_resource type="Texture2D" uid="uid://ddg4vnty20a3a" path="res://Sprites/png/EndScreenBG.png" id="1_bvex4"]
 [ext_resource type="Script" path="res://Scripts/BackGroundStoryA.gd" id="1_ejdp1"]
 [ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="2_6bwik"]
 [ext_resource type="Texture2D" uid="uid://waxtt4u7i1bs" path="res://Sprites/png/SceneA.png" id="3_b3qyq"]
+[ext_resource type="AudioStream" uid="uid://d0mbshqd10vhu" path="res://Sounds/wind-blowing-sfx-12809.mp3" id="5_swl2m"]
 
 [node name="BackGroundStoryA" type="Control"]
 layout_mode = 3
@@ -75,3 +76,6 @@ theme_override_font_sizes/font_size = 24
 text = "就讀竹科實中的小明是一位多次考試不仕，心灰意冷的讀書人。在一次又一次的
 落榜後，小明失意地望著眼前的靜心湖，一死了之的念頭在腦海緩緩浮現……。
 "
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_swl2m")

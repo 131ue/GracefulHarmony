@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c506yt5qrexxt"]
+[gd_scene load_steps=6 format=3 uid="uid://c506yt5qrexxt"]
 
 [ext_resource type="Texture2D" uid="uid://ddg4vnty20a3a" path="res://Sprites/png/EndScreenBG.png" id="1_ijohw"]
 [ext_resource type="Texture2D" uid="uid://bbysfsq37rmgg" path="res://Sprites/png/SchoolBG.png" id="2_eq7jg"]
 [ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="2_obsaj"]
 [ext_resource type="Script" path="res://Scripts/SchoolBg.gd" id="4_h4t5f"]
+[ext_resource type="AudioStream" uid="uid://cgoki6fd4ruma" path="res://Sounds/water-splash-199583.mp3" id="5_epl77"]
 
 [node name="BackGroundStoryA" type="Control"]
 layout_mode = 3
@@ -81,3 +82,6 @@ position = Vector2(156, 88)
 scale = Vector2(1.72103, 1.72103)
 texture = ExtResource("2_eq7jg")
 script = ExtResource("4_h4t5f")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_epl77")

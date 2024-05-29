@@ -7,7 +7,7 @@ func _ready():
 		#$Yuae/Yuae_Arrow.modulate = Color("34ff49")
 		$Yuae/Yuae_Arrow.visible = true
 	elif (Global.level == 7):
-		$Chao.modulate = Color("24b233")
+		$Chao.modulate = Color("34ff49")
 		#$Chao/Chao_Arrow.modulate = Color("24b233")
 		$Chao/Chao_Arrow.visible = true
 	elif (Global.level == 6):
@@ -15,7 +15,7 @@ func _ready():
 		#$Xin/Xin_Arrow.modulate = Color("fb2c86")
 		$Xin/Xin_Arrow.visible = true
 	elif (Global.level == 5):
-		$Chung.modulate = Color("ae1e5d")
+		$Chung.modulate = Color("fb2c86")
 		#$Chung/Chung_Arrow.modulate = Color("ae1e5d")
 		$Chung/Chung_Arrow.visible = true
 	elif (Global.level == 4):
@@ -23,7 +23,7 @@ func _ready():
 		#$Shih/Shih_Arrow.modulate = Color("04dcdc")
 		$Shih/Shih_Arrow.visible = true
 	elif (Global.level == 3):
-		$Ta.modulate = Color("028f8f")
+		$Ta.modulate = Color("04dcdc")
 		#$Ta/Ta_Arrow.modulate = Color("028f8f")
 		$Ta/Ta_Arrow.visible = true
 	elif (Global.level == 2):
@@ -31,7 +31,7 @@ func _ready():
 		#$Ken/Ken_Arrow.modulate = Color("fc9748")
 		$Ken/Ken_Arrow.visible = true
 	else:
-		$Chen.modulate = Color("af6932")
+		$Chen.modulate = Color("fc9748")
 		#$Chen/Chen_Arrow.modulate = Color("af6932")
 		$Chen/Chen_Arrow.visible = true
 	

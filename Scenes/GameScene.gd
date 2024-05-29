@@ -8,6 +8,7 @@ var great = 0
 var good = 0
 var okay = 0
 var missed = 0
+var total_spawned_notes = 0
 
 var bpm = 115
 
@@ -107,8 +108,8 @@ func _process(delta):
 		note_counter += 1
 		note_pos += 1
 		
-		#if(note_counter == 40):
-			#_endscreen()
+		if(note_counter == 10):
+			_endscreen()
 		if (note_counter == 143):
 			await get_tree().create_timer(6).timeout
 			_endscreen()
@@ -130,7 +131,7 @@ func _endscreen():
 	Global.combo = max_combo
 	Global.great = great
 	Global.good = good
-	Global.missed = missed
+	Global.missed = total_spawned_notes - great - good
 	if get_tree().change_scene_to_file("res://Scenes/End.tscn") != OK:
 		print ("Error changing scene to End")
 func _ready():
@@ -148,6 +149,8 @@ func _spawn_notes(lane):
 	instance = note.instantiate()
 	instance.initialize(lane)
 	add_child(instance)
+	total_spawned_notes += 1
+	print (total_spawned_notes)
 
 func increment_score(by):
 	if by > 0:
@@ -159,9 +162,6 @@ func increment_score(by):
 		great += 1
 	elif by == good_score:
 		good += 1
-	else:
-		missed += 1
-	
 	if by >= 0:
 		score_multiplyer =  combo  / 5.0
 		score += by * clamp(score_multiplyer,1,4)

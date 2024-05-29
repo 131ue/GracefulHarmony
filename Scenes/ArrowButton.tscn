@@ -33,6 +33,15 @@ scale = Vector2(1, 1.18131)
 shape = SubResource("2")
 debug_color = Color(0.8, 0.333333, 0.654902, 0.419608)
 
+[node name="MissArea" type="Area2D" parent="."]
+position = Vector2(0, 23)
+scale = Vector2(-2.47369, 0.459676)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MissArea"]
+scale = Vector2(1, 1.18131)
+shape = SubResource("2")
+debug_color = Color(0.8, 0.333333, 0.654902, 0.419608)
+
 [node name="PushTimer" type="Timer" parent="."]
 wait_time = 0.05
 one_shot = true
@@ -43,4 +52,6 @@ one_shot = true
 [connection signal="area_exited" from="GoodArea" to="." method="_on_GoodArea_area_exited"]
 [connection signal="area_entered" from="OkayArea" to="." method="_on_OkayArea_area_entered"]
 [connection signal="area_exited" from="OkayArea" to="." method="_on_OkayArea_area_exited"]
+[connection signal="area_entered" from="MissArea" to="." method="_on_miss_area_area_entered"]
+[connection signal="area_exited" from="MissArea" to="." method="_on_miss_area_area_exited"]
 [connection signal="timeout" from="PushTimer" to="." method="_on_PushTimer_timeout"]

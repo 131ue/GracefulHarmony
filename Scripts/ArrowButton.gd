@@ -3,10 +3,14 @@ extends AnimatedSprite2D
 var perfect = false
 var good = false
 var okay = false
+var miss = false
 var current_note = null
 
 @export var input = ""
 
+#func _process(_delta):
+	#if miss:
+		#Global.missed = Global.missed + 1
 
 func _unhandled_input(event):
 	if event.is_action(input):
@@ -61,7 +65,14 @@ func _on_OkayArea_area_exited(area):
 	if area.is_in_group("note"):
 		okay = false
 		current_note = null
-
+#func _on_miss_area_area_entered(area):
+	#if area.is_in_group("note"):
+		#miss = true
+	#
+#func _on_miss_area_area_exited(area):
+	#if area.is_in_group("note"):
+		#miss = false
+		#
 
 func _on_PushTimer_timeout():
 	frame = 0
@@ -72,5 +83,9 @@ func _reset():
 	perfect = false
 	good = false
 	okay = false
+
+
+
+
 
 

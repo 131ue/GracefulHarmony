@@ -1,9 +1,52 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5egn24e7v10m"]
+[gd_scene load_steps=11 format=3 uid="uid://b5egn24e7v10m"]
 
 [ext_resource type="Script" path="res://Scenes/SceneManager.gd" id="1_heow2"]
 [ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="2_7unwg"]
 [ext_resource type="PackedScene" uid="uid://dtppbqf5p615j" path="res://BackGroundStoryA.tscn" id="3_52kpm"]
+[ext_resource type="AudioStream" uid="uid://d0mbshqd10vhu" path="res://Sounds/wind-blowing-sfx-12809.mp3" id="5_3xu0d"]
 [ext_resource type="PackedScene" uid="uid://dhoywjb0ubx2j" path="res://Scenes/FadeAnimation.tscn" id="5_ssaw2"]
+[ext_resource type="AudioStream" uid="uid://cgoki6fd4ruma" path="res://Sounds/water-splash-199583.mp3" id="6_x84hr"]
+
+[sub_resource type="Animation" id="Animation_gcuh5"]
+resource_name = "SoundA_Fadeout"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+
+[sub_resource type="Animation" id="Animation_xlds3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ajlod"]
+resource_name = "SoundB_Fadeout"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0ta6o"]
+_data = {
+"RESET": SubResource("Animation_xlds3"),
+"SoundA_Fadeout": SubResource("Animation_gcuh5"),
+"SoundB_Fadeout": SubResource("Animation_ajlod")
+}
 
 [node name="SceneManager" type="Control"]
 layout_mode = 3
@@ -46,5 +89,17 @@ offset_right = 283.0
 offset_bottom = 50.0
 scale = Vector2(2.82042, 0.304915)
 color = Color(1, 1, 1, 0.666667)
+
+[node name="SceneAsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_3xu0d")
+
+[node name="SceneBsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_x84hr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../SceneAsound")
+libraries = {
+"": SubResource("AnimationLibrary_0ta6o")
+}
 
 [connection signal="transitioned" from="FadeAnimation" to="." method="_on_fade_animation_transitioned"]
