@@ -1,6 +1,6 @@
 extends Control
-const SceneB = preload("res://BackGroundStoryB.tscn")
-const SceneC = preload("res://BackGroundStoryC.tscn")
+const SceneB = preload("res://BackGroundStoryC.tscn")
+const SceneC = preload("res://BackGroundStoryB.tscn")
 const Tutorial = preload("res://Scenes/Tutorial.tscn")
 var transitioned_times = 0
 func _ready():
@@ -11,7 +11,8 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		$FadeAnimation.visible = true
 		$FadeAnimation.transition()
-		
+	if Input.is_action_pressed("escape"):
+		get_tree().change_scene_to_file("res://Scenes/GameScene.tscn")
 func _on_fade_animation_transitioned():
 	
 	if transitioned_times == 0:
@@ -31,6 +32,7 @@ func _on_fade_animation_transitioned():
 		$CurrentScene.add_child(Tutorial.instantiate())
 		transitioned_times = transitioned_times + 1
 		print("changed to Tutorial")
+		
 		
 	else:
 		get_tree().change_scene_to_file("res://Scenes/GameScene.tscn")

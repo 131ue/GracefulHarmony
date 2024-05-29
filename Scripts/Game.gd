@@ -37,10 +37,10 @@ func _ready():
 	$Conductor.play_with_beat_offset(8)
 
 
-func _input(event):
-	if event.is_action("escape"):
-		if get_tree().change_scene_to_file("res://Scenes/Menu.tscn") != OK:
-			print ("Error changing scene to Menu")
+#func _input(event):
+	#if event.is_action("escape"):
+		#if get_tree().change_scene_to_file("res://Scenes/Menu.tscn") != OK:
+			#print ("Error changing scene to Menu")
 
 
 func _on_Conductor_measure(position):

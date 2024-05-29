@@ -139,10 +139,10 @@ func _ready():
 	
 
 	
-func _input(event):
-	if event.is_action("escape"):
-		if get_tree().change_scene_to_file("res://Scenes/Menu.tscn") != OK:
-			print ("Error changing scene to Menu")
+#func _input(event):
+	#if event.is_action("escape"):
+		#if get_tree().change_scene_to_file("res://Scenes/Menu.tscn") != OK:
+			#print ("Error changing scene to Menu")
 
 func _spawn_notes(lane):
 	instance = note.instantiate()

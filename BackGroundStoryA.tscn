@@ -1,21 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtppbqf5p615j"]
+[gd_scene load_steps=5 format=3 uid="uid://dtppbqf5p615j"]
 
 [ext_resource type="Texture2D" uid="uid://ddg4vnty20a3a" path="res://Sprites/png/EndScreenBG.png" id="1_bvex4"]
+[ext_resource type="Script" path="res://Scripts/BackGroundStoryA.gd" id="1_ejdp1"]
 [ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="2_6bwik"]
+[ext_resource type="Texture2D" uid="uid://waxtt4u7i1bs" path="res://Sprites/png/SceneA.png" id="3_b3qyq"]
 
 [node name="BackGroundStoryA" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_ejdp1")
 
 [node name="A" type="Sprite2D" parent="."]
+visible = false
 z_index = 1
 position = Vector2(160, 91)
 scale = Vector2(1.67708, 1.68519)
 texture = ExtResource("1_bvex4")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 8
@@ -33,3 +38,40 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_6bwik")
 theme_override_font_sizes/font_size = 24
 text = "Scene A"
+
+[node name="SceneA" type="Sprite2D" parent="."]
+position = Vector2(159, 89)
+scale = Vector2(1.68, 1.68)
+texture = ExtResource("3_b3qyq")
+
+[node name="Dialogue" type="Node" parent="."]
+
+[node name="BG" type="ColorRect" parent="Dialogue"]
+z_index = 1
+offset_left = -31.0
+offset_top = 152.0
+offset_right = 9.0
+offset_bottom = 192.0
+scale = Vector2(9.44666, 1.09715)
+color = Color(0.196078, 0.180392, 0.25098, 0.752941)
+
+[node name="Text" type="Label" parent="Dialogue"]
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = 67.0
+offset_right = 1131.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.32, 0.32)
+theme_override_colors/font_color = Color(1, 0.831373, 0.639216, 1)
+theme_override_fonts/font = ExtResource("2_6bwik")
+theme_override_font_sizes/font_size = 24
+text = "就讀竹科實中的小明是一位多次考試不仕，心灰意冷的讀書人。在一次又一次的
+落榜後，小明失意地望著眼前的靜心湖，一死了之的念頭在腦海緩緩浮現……。
+"

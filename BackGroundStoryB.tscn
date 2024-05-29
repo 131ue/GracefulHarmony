@@ -1,20 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://dr4xnicwlq7ec"]
+[gd_scene load_steps=5 format=3 uid="uid://dr4xnicwlq7ec"]
 
-[ext_resource type="Texture2D" uid="uid://bf4pwsgk5641k" path="res://Sprites/png/c570c5ab28757b14.png" id="1_871dc"]
+[ext_resource type="Script" path="res://Scripts/BackGroundStoryB.gd" id="1_eje6f"]
+[ext_resource type="Texture2D" uid="uid://ddg4vnty20a3a" path="res://Sprites/png/EndScreenBG.png" id="1_qxvfi"]
 [ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="2_n7bl3"]
+[ext_resource type="Texture2D" uid="uid://bbysfsq37rmgg" path="res://Sprites/png/SchoolBG.png" id="3_dst2j"]
 
-[node name="BackGroundStoryB" type="Control"]
+[node name="BackGroundStoryC" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_eje6f")
 
-[node name="B" type="Sprite2D" parent="."]
-position = Vector2(159.5, 88)
-scale = Vector2(1.65104, 1.62963)
-texture = ExtResource("1_871dc")
+[node name="A" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(160, 91)
+scale = Vector2(1.67708, 1.68519)
+texture = ExtResource("1_qxvfi")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 8
@@ -22,13 +28,58 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 8.0
-offset_top = 37.0
-offset_right = 94.0
-offset_bottom = 65.0
+offset_left = 96.0
+offset_top = 52.0
+offset_right = 182.0
+offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_n7bl3")
 theme_override_font_sizes/font_size = 24
-text = "Scene B"
+text = "Scene A"
+
+[node name="SceneA" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(159, 89)
+scale = Vector2(1.68, 1.68)
+texture = ExtResource("3_dst2j")
+
+[node name="Dialogue" type="Node" parent="."]
+
+[node name="BG" type="ColorRect" parent="Dialogue"]
+z_index = 1
+offset_left = -28.0
+offset_top = 143.0
+offset_right = 12.0
+offset_bottom = 183.0
+scale = Vector2(9.44666, 1.09715)
+color = Color(0.196078, 0.180392, 0.25098, 0.752941)
+
+[node name="Text" type="Label" parent="Dialogue"]
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.0
+offset_top = 58.0
+offset_right = 1335.0
+offset_bottom = 241.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.279998, 0.279998)
+theme_override_colors/font_color = Color(1, 0.831373, 0.639216, 1)
+theme_override_fonts/font = ExtResource("2_n7bl3")
+theme_override_font_sizes/font_size = 24
+text = "
+「就決定是你了，王小明！」一個聲音忽然從古箏中傳來。轉瞬之間小明身體湧入了一股神
+奇力量，腦中亦多出了古箏的思緒。在貪財的古箏威逼利誘之下，小明被迫成為必須在新竹
+火車站賣藝賺錢的街頭藝人，請幫助小明演奏美妙的樂曲，讓小明贖回自己身體的自主權吧！
+"
+
+[node name="SchoolBg" type="Sprite2D" parent="."]
+position = Vector2(156, 88)
+scale = Vector2(1.72103, 1.72103)
+texture = ExtResource("3_dst2j")
