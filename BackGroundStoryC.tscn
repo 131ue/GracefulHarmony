@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c506yt5qrexxt"]
+[gd_scene load_steps=7 format=3 uid="uid://c506yt5qrexxt"]
 
 [ext_resource type="Texture2D" uid="uid://ddg4vnty20a3a" path="res://Sprites/png/EndScreenBG.png" id="1_ijohw"]
 [ext_resource type="Texture2D" uid="uid://bbysfsq37rmgg" path="res://Sprites/png/SchoolBG.png" id="2_eq7jg"]
 [ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="2_obsaj"]
 [ext_resource type="Script" path="res://Scripts/SchoolBg.gd" id="4_h4t5f"]
 [ext_resource type="AudioStream" uid="uid://cgoki6fd4ruma" path="res://Sounds/water-splash-199583.mp3" id="5_epl77"]
+[ext_resource type="Texture2D" uid="uid://c6hqwywhsnfft" path="res://Sprites/png/d89a813fa368fadf.png" id="6_2ogxa"]
 
 [node name="BackGroundStoryA" type="Control"]
 layout_mode = 3
@@ -78,6 +79,7 @@ text = "不等小明把握住一去不返的勇氣，湖面上一個黑點從遠
 被激起的水花噴溼了小明的衣服，他終於有辦法看清處，那居然是一具古箏。"
 
 [node name="SchoolBg" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(156, 88)
 scale = Vector2(1.72103, 1.72103)
 texture = ExtResource("2_eq7jg")
@@ -85,3 +87,8 @@ script = ExtResource("4_h4t5f")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_epl77")
+
+[node name="D89a813Fa368Fadf" type="Sprite2D" parent="."]
+position = Vector2(161, 92)
+scale = Vector2(1.7037, 1.7037)
+texture = ExtResource("6_2ogxa")

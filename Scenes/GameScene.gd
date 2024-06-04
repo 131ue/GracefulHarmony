@@ -108,8 +108,8 @@ func _process(delta):
 		note_counter += 1
 		note_pos += 1
 		
-		if(note_counter == 10):
-			_endscreen()
+		#if(note_counter == 10):
+			#_endscreen()
 		if (note_counter == 143):
 			await get_tree().create_timer(6).timeout
 			_endscreen()
