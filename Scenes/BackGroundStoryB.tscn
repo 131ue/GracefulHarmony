@@ -1,24 +1,24 @@
 [gd_scene load_steps=6 format=3 uid="uid://dr4xnicwlq7ec"]
 
-[ext_resource type="Script" path="res://Scripts/BackGroundStoryB.gd" id="1_eje6f"]
-[ext_resource type="Texture2D" uid="uid://ddg4vnty20a3a" path="res://Sprites/png/EndScreenBG.png" id="1_qxvfi"]
-[ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="2_n7bl3"]
-[ext_resource type="Texture2D" uid="uid://bbysfsq37rmgg" path="res://Sprites/png/SchoolBG.png" id="3_dst2j"]
-[ext_resource type="Texture2D" uid="uid://07kcfjjuc4tl" path="res://Sprites/png/213324.png" id="5_loicv"]
+[ext_resource type="Script" path="res://Scripts/BackGroundStoryB.gd" id="1_amks0"]
+[ext_resource type="Texture2D" uid="uid://ddg4vnty20a3a" path="res://Sprites/png/EndScreenBG.png" id="2_30ddu"]
+[ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="3_83247"]
+[ext_resource type="Texture2D" uid="uid://bbysfsq37rmgg" path="res://Sprites/png/SchoolBG.png" id="4_cxcms"]
+[ext_resource type="Texture2D" uid="uid://07kcfjjuc4tl" path="res://Sprites/png/213324.png" id="5_3c07p"]
 
 [node name="BackGroundStoryC" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_eje6f")
+script = ExtResource("1_amks0")
 
 [node name="A" type="Sprite2D" parent="."]
 visible = false
 z_index = 1
 position = Vector2(160, 91)
 scale = Vector2(1.67708, 1.68519)
-texture = ExtResource("1_qxvfi")
+texture = ExtResource("2_30ddu")
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -36,7 +36,7 @@ offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_n7bl3")
+theme_override_fonts/font = ExtResource("3_83247")
 theme_override_font_sizes/font_size = 24
 text = "Scene A"
 
@@ -44,7 +44,7 @@ text = "Scene A"
 visible = false
 position = Vector2(159, 89)
 scale = Vector2(1.68, 1.68)
-texture = ExtResource("3_dst2j")
+texture = ExtResource("4_cxcms")
 
 [node name="Dialogue" type="Node" parent="."]
 
@@ -72,7 +72,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.279998, 0.279998)
 theme_override_colors/font_color = Color(1, 0.831373, 0.639216, 1)
-theme_override_fonts/font = ExtResource("2_n7bl3")
+theme_override_fonts/font = ExtResource("3_83247")
 theme_override_font_sizes/font_size = 24
 text = "
 「就決定是你了，王小明！」一個聲音忽然從古箏中傳來。轉瞬之間小明身體湧入了一股神
@@ -84,9 +84,9 @@ text = "
 visible = false
 position = Vector2(156, 88)
 scale = Vector2(1.72103, 1.72103)
-texture = ExtResource("3_dst2j")
+texture = ExtResource("4_cxcms")
 
 [node name="213324" type="Sprite2D" parent="."]
 position = Vector2(161, 91)
 scale = Vector2(1.68345, 1.68345)
-texture = ExtResource("5_loicv")
+texture = ExtResource("5_3c07p")

@@ -38,6 +38,7 @@ sprite_frames = ExtResource("2_eky84")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1, 0.880001)
 shape = SubResource("1")
+debug_color = Color(0.854902, 0.305882, 0.545098, 0.419608)
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 emitting = false

@@ -1,6 +1,6 @@
 extends Control
-const SceneB = preload("res://BackGroundStoryC.tscn")
-const SceneC = preload("res://BackGroundStoryB.tscn")
+const SceneB = preload("res://Scenes/BackGroundStoryC.tscn")
+const SceneC = preload(	"res://Scenes/BackGroundStoryB.tscn")
 const Tutorial = preload("res://Scenes/Tutorial.tscn")
 var transitioned_times = 0
 func _ready():
@@ -8,7 +8,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	
+
 	if Input.is_action_just_pressed("ui_accept"):
 		$FadeAnimation.visible = true
 		$FadeAnimation.transition()

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/SceneManager.gd" id="1_heow2"]
 [ext_resource type="FontFile" path="res://Fonts/cubic.tres" id="2_7unwg"]
-[ext_resource type="PackedScene" uid="uid://dtppbqf5p615j" path="res://BackGroundStoryA.tscn" id="3_52kpm"]
+[ext_resource type="PackedScene" uid="uid://dtppbqf5p615j" path="res://Scenes/BackGroundStoryA.tscn" id="3_52kpm"]
 [ext_resource type="AudioStream" uid="uid://d0mbshqd10vhu" path="res://Sounds/wind-blowing-sfx-12809.mp3" id="5_3xu0d"]
 [ext_resource type="PackedScene" uid="uid://dhoywjb0ubx2j" path="res://Scenes/FadeAnimation.tscn" id="5_ssaw2"]
 [ext_resource type="AudioStream" uid="uid://cgoki6fd4ruma" path="res://Sounds/water-splash-199583.mp3" id="6_x84hr"]

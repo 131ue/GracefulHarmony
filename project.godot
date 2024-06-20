@@ -88,6 +88,6 @@ escape={
 
 textures/canvas_textures/default_texture_filter=0
 environment/defaults/default_clear_color=Color(0.305882, 0.286275, 0.372549, 1)
-environment/defaults/default_environment="res://default_env.tres"
+environment/defaults/default_environment="res://Fonts/default_env.tres"
 quality/driver/driver_name="GLES2"
 2d/snapping/use_gpu_pixel_snap=true
