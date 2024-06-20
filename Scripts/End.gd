@@ -1,7 +1,8 @@
 extends Node2D
-
-
 func _ready():
+	
+	$PlayAgain.grab_focus()
+	
 	if (Global.level == 8):
 		$Yuae.modulate = Color("34ff49")
 		#$Yuae/Yuae_Arrow.modulate = Color("34ff49")

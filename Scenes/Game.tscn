@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dvpdm1e4yj1nc"]
+[gd_scene load_steps=13 format=3 uid="uid://ci1qb4jhh2kbv"]
 
 [ext_resource type="PackedScene" uid="uid://0vigvikr0crs" path="res://Scenes/ArrowButton.tscn" id="1"]
 [ext_resource type="SpriteFrames" uid="uid://dt3gvvoqxwbw" path="res://Frames/arrow_left_frames.tres" id="2"]
